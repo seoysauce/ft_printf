@@ -6,7 +6,7 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 16:24:56 by seojeong          #+#    #+#             */
-/*   Updated: 2020/12/30 16:43:08 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/12/30 18:30:05 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ int					ft_printf(const char *form, ...);
 const char			*read_flag(const char *form, t_info *info);
 const char			*read_width(const char *form, t_info *info, va_list ap);
 const char			*read_prec(const char *form, t_info *info, va_list ap);
-const char			*print_form_spec(const char *form, t_info *info, va_list ap);
+const char			*print_form_spec(const char *form, t_info *info,
+va_list ap);
 void				print_c(t_info *info, va_list ap, const char *form);
 void				print_p(t_info *info, va_list ap);
 void				print_s_1(t_info *info, int *size, char *data);

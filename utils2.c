@@ -6,13 +6,13 @@
 /*   By: seojeong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 16:28:52 by seojeong          #+#    #+#             */
-/*   Updated: 2020/12/30 16:28:58 by seojeong         ###   ########.fr       */
+/*   Updated: 2020/12/30 18:32:01 by seojeong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_putdata(long long data)
+void	ft_putdata(long long data)
 {
 	if (data < 0)
 	{
@@ -29,7 +29,7 @@ void ft_putdata(long long data)
 		write(1, &"0123456789"[data % 10], 1);
 }
 
-void ft_puthex(unsigned long long data)
+void	ft_puthex(unsigned long long data)
 {
 	if (data >= 16)
 	{
@@ -40,7 +40,7 @@ void ft_puthex(unsigned long long data)
 		write(1, &"0123456789ABCDEF"[data % 16], 1);
 }
 
-void ft_puthex2(unsigned long long data)
+void	ft_puthex2(unsigned long long data)
 {
 	if (data >= 16)
 	{
@@ -51,7 +51,7 @@ void ft_puthex2(unsigned long long data)
 		write(1, &"0123456789abcdef"[data % 16], 1);
 }
 
-void ft_put_data(long long data, const char *form)
+void	ft_put_data(long long data, const char *form)
 {
 	if (*form == 'd' || *form == 'i' || *form == 'u')
 		ft_putdata(data);
@@ -60,4 +60,3 @@ void ft_put_data(long long data, const char *form)
 	else if (*form == 'x')
 		ft_puthex2(data);
 }
-
